@@ -1,0 +1,34 @@
+  <% @cart.line_items.each do |item| %>
+    <tr>
+      <td><%= item.quantity %>&times;</td>
+      <td><%= item.product.title %></td>	
+      <td class="item_price">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= number_to_currency(item.total_price) %></td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td><%= button_to 'Delete Item from Bag', item, :method => :delete, :confirm => 'Are You Sure?' %></td>
+
+    </tr>
+  <% end %>
+  
+<div id="cart">
+        <%= render @cart %>
+      </div>
+
+<div id="rightside">  
+      <%= render @cart %>
+    </div>  
+
+#rightside{
+        
+        
+
+       
+        }
+@line_item.cart
+
+<td><%= link_to 'Click here to go to home page', store_path %></td>
+, :notice => 'Item has been removed from your Bag.')
+
+line_item_path(assigns(:line_item).cart)
+line_items_path
+line_item_path(assigns(:line_item))
+assert_redirected_to store_path
